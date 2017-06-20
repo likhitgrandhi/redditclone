@@ -1,0 +1,15 @@
+{% extends "reddit/base.html" %}
+{% block body %}
+<div class="container-fluid" style="padding-top: 8px;">
+  <div class="row">
+  <div class="col-8">
+<h4>{{ category.name }}</h4>
+<ol style="color: #999999">
+{% for post in posts %}
+<li style="font-size: 24px;"><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ol>
+  </div>
+</div>
+</div>
+{% endblock %}
